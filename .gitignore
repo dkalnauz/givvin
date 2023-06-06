@@ -1,0 +1,57 @@
+# .NET 7 Solution
+## Ignore the bin and obj directories for all projects
+**/bin/
+**/obj/
+
+## Ignore the .vs directory (Visual Studio metadata)
+.vs/
+
+## Ignore the .NET Core and Visual Studio files
+*.dll
+*.exe
+*.pdb
+*.userprefs
+*.suo
+*.cache
+*.tmp
+*.vspscc
+.vscode/
+*.csproj.user
+*.bak
+
+## Ignore the NuGet packages folder
+## If you have custom NuGet package locations, modify this section accordingly
+packages/
+*.nupkg
+*.snupkg
+
+## Ignore the local development environment
+launchSettings.json
+
+## Ignore the Visual Studio generated project files
+**/*.sln
+**/*.csproj
+
+## Ignore the appsettings.json file (for local configuration)
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+## Ignore the user secrets file (for local development secrets)
+secrets.json
+
+## Ignore the build output
+## Modify this section if you have a custom build output location
+bin/
+obj/
+
+## Ignore the .NET Core tools
+.NETTools/
+
+## Ignore the Docker Compose file (if using Docker)
+docker-compose.yml
+docker-compose.override.yml
+docker-compose.vs.debug.yml
+
+## Ignore the publish output
+publish/
