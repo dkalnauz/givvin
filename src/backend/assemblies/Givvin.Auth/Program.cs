@@ -7,6 +7,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAuthentication()
+    .AddGoogle(options =>
+    {
+        options.ClientId = "887116429252-clnvald7dq4hrev0fnounbj95t8nasa0.apps.googleusercontent.com";
+        options.ClientSecret = "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";
+    });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -18,7 +25,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseAuthentication();
+//app.UseAuthorization();
 
 app.MapControllers();
 
