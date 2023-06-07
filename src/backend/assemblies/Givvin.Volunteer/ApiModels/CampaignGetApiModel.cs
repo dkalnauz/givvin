@@ -1,19 +1,13 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
-using Givvin.Volunteer.ApiModels;
-
-namespace Givvin.Volunteer.Models
+﻿namespace Givvin.Volunteer.ApiModels
 {
     /// <summary>
     /// Represents a fundraising campaign within the platform.
     /// </summary>
-    public class Campaign
+    public class CampaignGetApiModel
     {
         /// <summary>
         /// The unique identifier for the campaign.
         /// </summary>
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
         /// <summary>
@@ -60,40 +54,5 @@ namespace Givvin.Volunteer.Models
         /// Indicates whether the campaign is active or not.
         /// </summary>
         public bool IsActive { get; set; }
-
-        /// <summary>
-        /// Converts the Campaign entity to a CampaignGetApiModel.
-        /// </summary>
-        /// <returns>The corresponding CampaignGetApiModel.</returns>
-        public CampaignGetApiModel ToApiModel()
-        {
-            return new CampaignGetApiModel
-            {
-                Id = Id,
-                Title = Title,
-                Description = Description,
-                StartDate = StartDate,
-                EndDate = EndDate,
-                GoalAmount = GoalAmount,
-                CurrentAmount = CurrentAmount,
-                CreatedBy = CreatedBy,
-                Contributors = Contributors,
-                IsActive = IsActive
-            };
-        }
-
-        /// <summary>
-        /// Updates the Campaign entity using the provided CampaignUpdateApiModel.
-        /// </summary>
-        /// <param name="model">The CampaignUpdateApiModel containing the updated data.</param>
-        public void UpdateFromApiModel(CampaignUpdateApiModel model)
-        {
-            Title = model.Title;
-            Description = model.Description;
-            StartDate = model.StartDate;
-            GoalAmount = model.GoalAmount;
-            CreatedBy = model.CreatedBy;
-            IsActive = model.IsActive;
-        }
     }
 }
