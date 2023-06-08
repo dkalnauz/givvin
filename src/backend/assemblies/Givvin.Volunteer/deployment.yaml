@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: givvin-volunteer-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: givvin-volunteer
+  template:
+    metadata:
+      labels:
+        app: givvin-volunteer
+    spec:
+      containers:
+        - name: givvin-volunteer
+          image: dkalnauz/givvin-volunteer:latest
+          ports:
+            - containerPort: 80

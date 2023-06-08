@@ -1,0 +1,59 @@
+# Flutter/Dart specific
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+build/
+ios/Pods/
+macos/Flutter/Flutter.podspec
+**/GeneratedPluginRegistrant.*
+
+# Android specific
+**/gradle-wrapper.jar
+**/local.properties
+**/.idea/
+**/.android/
+**/.android_generated/
+**/*.iml
+**/gradlew
+**/gradlew.bat
+**/.gradle/
+**/build/
+
+# iOS specific
+**/Pods/
+**/*.xcworkspace/
+**/*.xccheckout
+**/*.xcscmblueprint
+**/*.xcodeproj/
+**/*.pbxproj
+**/*.mode1v3
+**/*.mode2v3
+**/*.perspectivev3
+**/*.xcworkspace/
+**/*.xcworkspacedata
+**/*.xcuserstate
+
+# IntelliJ/IDEA specific
+**/*.iml
+**/.idea/
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/dataSources/
+**/.idea/dataSources.ids
+**/.idea/sqlDataSources.xml
+**/.idea/dynamic.xml
+**/.idea/uiDesigner.xml
+**/.idea/encodings.xml
+**/.idea/misc.xml
+**/.idea/modules.xml
+**/.idea/vcs.xml
+**/.idea/jsLibraryMappings.xml
+**/.idea/dart_library.xml
+**/.idea/workspace.xml
+**/.idea/navEditor.xml
+**/.idea/assetWizardSettings.xml
+
+# Visual Studio Code specific
+.vscode/

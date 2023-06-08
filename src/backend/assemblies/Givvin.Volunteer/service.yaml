@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: givvin-volunteer-service
+spec:
+  selector:
+    app: givvin-volunteer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
